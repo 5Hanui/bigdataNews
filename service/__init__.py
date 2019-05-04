@@ -29,4 +29,10 @@ def initRoute(app):
     @app.route('/about')
     def about():
         return render_template('about-us.html')
+    
+    #SIGNUP 라우트 설정
+    @app.route('/signup', methods=['GET'])
+    def signup():
+        resp = make_response(render_template('signup.html'))
+        return resp
 
