@@ -24,8 +24,12 @@ def initRoute(app):
         
 
         return resp  # 응답을 가로채서 던짐.
+    #2 login
+    @app.route('/login')
+    def login():
+        return render_template('login.html')
 
-    #2 about us
+    #3 about us
     @app.route('/about')
     def about():
         return render_template('about-us.html')
