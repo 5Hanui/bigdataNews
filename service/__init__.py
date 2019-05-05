@@ -52,3 +52,4 @@ def initRoute(app):
         resp = make_response(render_template('signup.html'))
         return resp
 
+
