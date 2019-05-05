@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for, session, make_response, jsonify
+from service.model import selectLogin, insertUser
 
 # 플라스크 앱 생성
 def createApp():
@@ -25,9 +26,20 @@ def initRoute(app):
 
         return resp  # 응답을 가로채서 던짐.
     #2 login
-    @app.route('/login')
+    @app.route('/login', methods=['GET','POST'])
     def login():
-        return render_template('login.html')
+        if request.method == 'GET':
+            # 쿠키를 읽어와서 아이디창에 채운다.
+            user_email = request.cookies.get('email')
+            if not user_email:  # 쿠키 없으면
+                user_email = ''  # 쿠키는 아이디를 들고 있거나 없거나.
+            return render_template('login.html')
+        else:
+            # 잘 넘어오는지 체크
+            user_email = request.form.get('email')
+            user_pw = request.form.get('pw')
+            row = selectLogin(user_email, user_pw)
+            return redirect(url_for('home'))
 
     #3 about us
     @app.route('/about')

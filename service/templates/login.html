@@ -1,12 +1,12 @@
 <body>
-    <form class="vldform vldauth" action="login.php" method="POST">
+    <form class="vldform vldauth" action="login" method="POST">
         <h1>Log in</h1>
-        <input class="vldform__textbox" type="text" name="username" placeholder="Username" required>
-        <input class="vldform__textbox" type="password" name="pass" id="" placeholder="Password" required>
+        <input class="vldform__textbox" type="text" name="email" placeholder="Username" required>
+        <input class="vldform__textbox" type="password" name="pw" id="" placeholder="Password" required>
         <a class="vldform__recoverypassword" href="#" onclick="showrecoveryform()">Forgot password?</a>
         <input class="vldform__button" type="submit" value="Log in">
         <p class="vldform__signup">Don't have account?
-            <a class="vldform__signuplink" href="#" onclick="showregform()">Sign up</a>
+            <a class="vldform__signuplink" href="/signup" onclick="showregform()">Sign up</a>
         </p>
     </form>
     <form class="vldform vldreg" action="register.php" method="POST">
