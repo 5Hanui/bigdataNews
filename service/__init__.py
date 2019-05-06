@@ -54,8 +54,14 @@ def initRoute(app):
     
     #기업별페이지
     @app.route('/elements', methods=['GET'])
-    def company():
+    def elements():
         resp = make_response(render_template('elements.html'))
+        return resp
+       
+    # 채용공고 화면 라우트 설정
+    @app.route('/category', methods=['GET'])
+    def category():
+        resp = make_response(render_template('category.html'))
         return resp
 
 

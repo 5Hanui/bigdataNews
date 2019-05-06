@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="zxx" class="no-js">
-<head>
-	{# jinja엔진은 include옵션을 사용하여 다른 html을 포함시켜 랜더링이 가능#}
-	{% include ['a.html','b.html','mod/head.html'] ignore missing %} {#차례대로 순위대로 확인,없을때 ignore missing로 오류해결#}
-</head>
+	<head>
+		{# jinja엔진은 include옵션을 사용하여 다른 html을 포함시켜 랜더링이 가능#}
+		{% include ['a.html','b.html','mod/head.html'] ignore missing %} {#차례대로 순위대로 확인,없을때 ignore missing로 오류해결#}
+	</head>
 	<body>
 		{# 상단바 #}
 		{% include 'mod/tophead.html' %}
