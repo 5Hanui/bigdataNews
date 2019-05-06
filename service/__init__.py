@@ -51,5 +51,11 @@ def initRoute(app):
     def signup():
         resp = make_response(render_template('signup.html'))
         return resp
+    
+    #기업별페이지
+    @app.route('/elements', methods=['GET'])
+    def company():
+        resp = make_response(render_template('elements.html'))
+        return resp
 
 

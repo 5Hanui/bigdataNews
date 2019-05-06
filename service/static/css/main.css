@@ -1085,7 +1085,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .progress-table .serial {
-  width: 11.83%;
+  /* width: 11.83%; */
   padding-left: 30px;
 }
 
