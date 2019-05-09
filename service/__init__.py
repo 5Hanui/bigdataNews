@@ -64,4 +64,9 @@ def initRoute(app):
         resp = make_response(render_template('category.html'))
         return resp
 
+    #기업별페이지
+    @app.route('/ele', methods=['GET'])
+    def ele():
+        resp = make_response(render_template('ele.html'))
+        return resp
 
