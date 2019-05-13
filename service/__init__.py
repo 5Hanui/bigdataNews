@@ -70,3 +70,9 @@ def initRoute(app):
         resp = make_response(render_template('ele.html'))
         return resp
 
+    #기업별페이지
+    @app.route('/ele2', methods=['GET'])
+    def ele2():
+        resp = make_response(render_template('ele2.html'))
+        return resp
+
